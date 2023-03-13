@@ -1,0 +1,122 @@
+body{
+    overflow-x: hidden !important;
+}
+.plan{
+    background-color: var(--color-praimary);
+    margin-top: 8rem;
+}
+
+.plan svg{
+    background-color: #0c081b;
+}
+.packs{
+    height: 100%;
+
+}
+
+.grid{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    gap: 2.5rem;
+    padding-bottom: 20px;
+}
+
+.pack_content{
+    background-color: transparent;
+    padding-bottom: 20px;
+    border-radius:  5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.534);
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+    border: 1px solid;
+}
+.pack_content::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(var(--color-sixth), var(--color-furth),  var(--color-sixth));
+    transition: opacity 0.5s linear;
+    z-index: -1;
+    opacity: 0;
+}
+.pack_content:hover::before{
+    opacity: 1;
+}
+.pack_content:hover{
+    scale: 1.02;
+    border-color: transparent;
+    
+}
+
+.pack_content .upper{
+    padding-bottom: 20px;
+    padding-top: 40px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 0px;
+}
+.price{
+    font-size: 3.2rem;
+    color: rgb(102, 253, 102);
+    font-weight: bold;
+}
+.price span{
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.pack_feature li::marker{
+    content: '\2713';
+    font-size: 1.5rem;
+    color: rgb(102, 253, 102);
+}
+.pack_feature li{
+    padding-left: 10px;
+    font-weight: normal;
+}
+.upper p{
+    color:#c2c2c2;
+}
+.upper h1{
+    font-weight: bold;    
+}
+
+.buy_btn{
+    font-family: 'poppins', 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px ;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 2rem;
+    color: var(--color-third);
+    letter-spacing: 2px;
+    border-radius: 5px;
+    border: 1px solid var(--color-third);
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    transition: all 0.5s;
+}
+.buy_btn:hover{
+    box-shadow: 0 2px 5px var(--color-third);
+    background-color: var(--color-third);
+    color: #fff;
+}
+.buy_btn:active{
+    background-color: transparent;
+    scale: 0.9;
+}
+
+@media (max-width:991.98px)  {
+    .grid{
+        flex-direction: column;
+        margin-inline: 20px;
+    }
+}

@@ -1,0 +1,131 @@
+.slider{
+    overflow: hidden;
+    position: relative;
+}
+.slider::after, .slider::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.slider::after{
+    box-shadow: 5px 0 30px 30px #0c081b;
+    left: 0;
+}
+.slider::before{
+    box-shadow: -5px 0 30px 30px #0c081b;
+    z-index: 100;
+    right: 0;
+}
+.movie_api{
+    display: flex;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+    width: calc(150px * 40);
+    animation: scroll 70s ease-in-out  infinite;
+    
+}
+.show_api{
+    display: flex;
+    color: rgb(0, 0, 0);
+    width: calc(160px * 40);
+    animation: scroll_tv 70s ease-in-out infinite;
+}
+
+
+
+.poster_film{
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 5px 5px 10px black;
+    margin-bottom: 10px;
+    margin-inline: 5px;
+    transform: translateX(-20px);
+}
+
+
+.poster_film img{
+    width: 150px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.all_api{
+    overflow-x: hidden;
+}
+.entertament{
+    margin-top: 8rem;
+}
+.text{
+    padding-inline: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+/*  ---------- countUp style ------------ */
+
+.num{
+    padding: 5px;
+    font-size: 3rem;
+    color: var(--color-third);
+    font-weight: bold;
+}
+.countup{
+    margin-top: 150px;
+
+    
+}
+.countup .col-md-4{
+    border-radius: 50% ;
+    background-color: var(--body-color);
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 5px 5px 20px , 5px 5px 20px rgb(0, 0, 0);
+}
+
+.sign{
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+
+@media (max-width:760px) {
+    .countup .col-md-4{
+        margin-block: 20px;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-160px * 20));
+    }
+}
+@keyframes scroll_tv {
+    0%{
+        transform: translateX(calc(-160px * 20));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
